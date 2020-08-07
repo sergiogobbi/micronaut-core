@@ -17,7 +17,7 @@ Key interfaces are:
 
 - An interface for classes that bind an api:core.type.Argument[Argument] from an api:http.HttpRequest[HttpRequest] driven by an annotation.
 
-TIP: Its common to use the api:io.micronaut.core.convert.ConversionService[ConversionService] to convert the data to the
+TIP: It is common to use the api:io.micronaut.core.convert.ConversionService[ConversionService] to convert the data to the
 type of the argument.
 
 === TypedRequestArgumentBinders
@@ -34,7 +34,7 @@ A BindingResult of the class you are binding will be returned from the bind meth
 satisfied and unsatisfied.  You can return your own result or EMPTY which will mean the request is satisfied and you have
 bound the request.  If UNSATISFIED is returned, the bind will be attempted again until the request is satisfied.  There are
 many reasons why a request might not be satisfied on the first go - all beans may not be initialized, the filter may not
-have return from it's process, services may not have responded, etc.
+have returned from it's processes, services may not have responded in time, etc.
 
 If the bindingResult contains errors... ## add some details...
 
